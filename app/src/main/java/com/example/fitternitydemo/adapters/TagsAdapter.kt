@@ -9,10 +9,13 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.constraintlayout.widget.ConstraintLayout
+import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.fitternitydemo.R
 import com.example.fitternitydemo.datamodels.instudioresponse.ProductTag
+import com.example.fitternitydemo.utils.customDialog
+import com.example.flatdialoglibrary.dialog.FlatDialog
 import java.util.*
 
 
@@ -46,7 +49,7 @@ class TagsAdapter(//    static String sel_cat, sel_cat_id;
         Glide.with(context).load(tags.image).placeholder(R.drawable.ic_launcher_foreground).into(holder.image_prof)
 
         holder.itemView.setOnClickListener {
-
+            customDialog(context,tags.title,tags.text)
         }
     }
 

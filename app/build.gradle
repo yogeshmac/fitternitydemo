@@ -75,5 +75,7 @@ dependencies {
     //autoscoll
     implementation 'com.github.pzienowicz:androidx-auto-scroll-view-pager:1.2.0'
 
+    //dialog
+    implementation 'com.github.mejdi14:Flat-Dialog-Android:1.0.5'
 
 }

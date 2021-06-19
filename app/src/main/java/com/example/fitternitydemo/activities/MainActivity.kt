@@ -19,6 +19,7 @@ import com.example.fitternitydemo.databinding.ActivityMainBinding
 import com.example.fitternitydemo.datamodels.instudioresponse.ProductTag
 import com.example.fitternitydemo.fragments.FirstFragment
 import com.example.fitternitydemo.fragments.SecondFragment
+import com.example.fitternitydemo.utils.customDialog
 import com.google.android.material.tabs.TabLayout
 import java.util.*
 
@@ -49,6 +50,11 @@ class MainActivity : AppCompatActivity() {
         setupViewPager(binding.viewpager);
 
         binding.tabs.setupWithViewPager(binding.viewpager);
+
+        binding.city.setOnClickListener {
+            customDialog(this,"Select Location","mumbai")
+        }
+
 
         setupTabIcons();
 
